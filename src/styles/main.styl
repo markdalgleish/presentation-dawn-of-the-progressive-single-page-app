@@ -1,0 +1,346 @@
+// New to Stylus? Check out http://learnboost.github.io/stylus
+// Use modern CSS thanks to Autoprefixer: https://github.com/ai/autoprefixer
+
+// Import CSS from "node_modules" and "bower_components"
+// thanks to Stylus' "import css" and "paths" options
+
+@import 'prism/themes/prism-okaidia.css'
+// Check out "bower_components/prism/themes/" for available themes
+
+// BEGIN: Magic global strings
+
+$backgroundColor = #111
+$textColor = #000
+$boxColor = #fff
+$arrowColor = #fff
+
+article,
+section
+  perspective: 600px
+
+.grayscale
+  filter: grayscale(1)
+
+ul.roman li
+  list-style: lower-roman
+  padding-left: 16px
+  padding-bottom: 16px
+  &:before
+    display: none
+
+svg
+  color: $textColor
+  font-family: didot
+
+  .node
+    fill: $boxColor !important
+    stroke: none !important
+
+  path
+    stroke: $arrowColor !important
+
+  [id^=arrowhead] path
+    fill: $arrowColor !important
+
+  .label span
+    background: $backgroundColor !important
+    color: white !important
+    font-size: .6em
+    padding: .5em .6em 1.5em
+
+.babel
+  filter: invert(100%)
+  transform: scale(0.8)
+
+li
+  font-family: didot
+  font-style: italic
+
+a h4
+  margin: .4em 0
+
+h3.big
+  font-size: 52px
+
+button
+  background: #fff
+  border-radius: 10px
+  border: 0
+  color: black
+  padding: 10px 33px 10px 30px
+  font-size: 64px
+  transition: all .3s ease
+  &:active
+    transform: scale(0.8)
+  &:focus
+    outline: none
+    background: red
+    transition: transform .3s ease, background 4s ease
+  &.hamburger
+    width: 200px
+    height: 180px
+    position: relative
+      .bar
+        border-radius: 5px
+        position: absolute
+        left: 30px
+        right: 30px
+        height: 30px
+        background: #000
+        &:nth-child(1) { top: 30px }
+        &:nth-child(2) { top: 75px }
+        &:nth-child(3) { top: 120px }
+
+.large
+  zoom: 1.4
+
+.avatar
+  width: 100px
+  border-radius: @width
+  .avatars &
+    display: inline-block
+    margin: 20px
+
+.iphone
+  width: 150px
+  height: 260px
+  background: #fff
+  border: 16px solid #444
+  border-width: 32px 16px
+  border-radius: 16px
+  margin-bottom: 24px
+  &--loading
+    background: url('../images/loading-spin.svg')
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: 60px
+
+.dawn
+  background-image: url('../images/dawn.gif')
+  transform: none
+  &.bespoke-backdrop-active,
+  &.bespoke-backdrop-before
+    transform: scale(2)
+  &.bespoke-backdrop-active
+    opacity: 0.4
+    transition: opacity 5s ease, transform 20s ease
+
+.universaljs
+  background-image: url('../images/universaljs.png')
+  background-size: 500px
+  background-repeat: no-repeat
+  transform: scale(1.8)
+  &.bespoke-backdrop-active
+    opacity: 0.2
+  &.bespoke-backdrop-active,
+  &.bespoke-backdrop-before
+    transform: scale(1)
+
+.routing
+  background-image: url('../images/routing.gif')
+  transform: none !important
+  &.bespoke-backdrop-active
+    opacity: 0.7
+
+.datafetching
+  background-image: url('../images/datafetching.gif')
+  transform: none !important
+  &.bespoke-backdrop-active
+    opacity: 0.3
+
+.formsubmission
+  background-image: url('../images/formsubmission.gif')
+  transform: none !important
+  &.bespoke-backdrop-active
+    opacity: 0.3
+
+.microinteractions
+  background-image: url('../images/microinteractions.gif')
+  transform: none !important
+  &.bespoke-backdrop-active
+    opacity: 0.3
+
+.websurfintime
+  background-image: url('../images/websurfintime.gif')
+  background-position: 50% 0
+  transform: none !important
+  &.bespoke-backdrop-active
+    opacity: .3 !important
+
+.explosion
+  background-image: url('../images/explosion.gif')
+  transform: none !important
+
+.disco
+  background-image: url('../images/disco.gif')
+  background-position: 50% 0
+  transform: none !important
+
+.tim
+  background-image: url('../images/tim.jpg')
+  transform-origin: 70% 40%
+
+.ryandahl
+  background-image: url('../images/ryandahl.png')
+  transform-origin: 60% 20%
+  &.bespoke-backdrop-active
+    opacity: 0.4
+
+.substack
+  background-image: url('../images/substack.jpg')
+  transform-origin: 50% 30%
+  &.bespoke-backdrop-active
+    opacity: 0.3
+
+.alexrussell
+  background-image: url('../images/alexrussel.png')
+  background-position: 0 50%
+  transform-origin: 40% 40%
+  &.bespoke-backdrop-active
+    opacity: 0.2
+
+.space
+  background-image: url('../images/space.jpg')
+  transform-origin: 50% 100%
+  &.bespoke-backdrop-active
+    transition: opacity 5s ease, transform 20s ease
+
+.virtual-dom
+  background-image: url('../images/virtual-dom.gif')
+  transform: none !important
+  &.bespoke-backdrop-active
+    opacity: 0.7
+
+.glimmer
+  background-image: url('../images/glimmer.gif')
+  transform: none !important
+  &.bespoke-backdrop-active
+    opacity: 0.8
+
+.stevechampeon
+  background-image: url('../images/stevechampeon.jpg')
+  transform-origin: 50% 40%
+  &.bespoke-backdrop-active
+    opacity: 0.3
+
+.lukew
+  background-image: url('../images/lukew.jpg')
+  transform-origin: 70% 50%
+  &.bespoke-backdrop-active
+    opacity: 0.4
+
+.bradf
+  background-image: url('../images/bradf.png')
+  background-position: 50% 0
+  transform-origin: 50% 70%
+  &.bespoke-backdrop-active
+    opacity: 0.4
+
+.aarong
+  background-image: url('../images/aarong.jpg')
+  background-position: 0% 100%
+  transform-origin: 20% 50%
+  &.bespoke-backdrop-active
+    opacity: 0.4
+
+.jakea
+  background-image: url('../images/jakea.jpg')
+  background-position: 0 50%
+  transform-origin: 40% 40%
+  &.bespoke-backdrop-active
+    opacity: 0.3
+
+.elijahmanor
+  background-image: url('../images/elijahmanor.jpg')
+  transform-origin: 50% 40%
+  &.bespoke-backdrop-active
+    opacity: 0.3
+
+.loading
+  background-image: url('../images/loading-spin.svg')
+  background-size: 200px
+  background-position: 0 50%
+  transform-origin: 50% 50%
+  transform: scale(3)
+  &.bespoke-backdrop-active
+    opacity: 0.1
+    transition-duration: 10s
+  &.bespoke-backdrop-active,
+  &.bespoke-backdrop-before
+    transform: scale(1)
+
+.seek-logo
+  background-image: url('../images/seek.svg');
+  width: 200px;
+  height: 200px;
+  background-size: auto 100%;
+  margin-bottom: 40px;
+  position: relative;
+  left: 3px;
+  &.small
+    width: 100px
+    height: 100px
+    margin-bottom: 0
+    left: 0
+
+// Webpack logo stuff
+@import './webpack-logo.css'
+
+.webpack-logo {
+  width: 200px;
+  height: 200px;
+  margin-top: -60px;
+  margin-bottom: -48px;
+  zoom: 3;
+  transform: scale(.5);
+}
+
+.logo {
+  transform: rotateX(0deg);
+}
+
+// Ryan Seddon, you legend.
+.takeoff
+  width: 100px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  left: 22px;
+.takeoff input + label
+  width: 56px;
+  height: 118px;
+  background: url('../images/rocket.png') 0 0 no-repeat;
+  display: block;
+  transition: transform 8s;
+  transition-timing-function: cubic-bezier(0.38, -0.1, 0.46, 0.45);
+.takeoff input:checked + label
+  height: 156px;
+  background-position: 0 100%;
+  transform: translateY(-20em);
+.takeoff input ~ .stars
+  background: url('../images/star-background.jpg')
+  background-size: cover
+  position: absolute
+  z-index: -2
+  left: -500px
+  top: -1000px
+  width: 1100px
+  height: 2000px
+  transition: all 5s ease
+.takeoff input:checked ~ .stars
+  transform: translateY(200px)
+  transition: all 10s ease
+  transition-delay: .3s
+.takeoff input ~ .planet
+  position: absolute;
+  bottom: -1950px;
+  left: -980px;
+  width: 2040px;
+  height: 2040px;
+  background: #424242;
+  border-radius: 2040px;
+  z-index: -1;
+  transition: all 5s ease
+  transition-delay: .3s
+.takeoff input:checked ~ .planet
+  transform: translateY(400px)

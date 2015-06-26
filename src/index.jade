@@ -1,0 +1,671 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Dawn of the Progressive Single Page App
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+
+    article
+
+      section
+        img.avatar(src='images/profile.jpg')
+
+      section
+        h2 I have a<br /><br />confession<br /><br />to make
+
+      section
+        h1 I broke the web
+
+      section
+        .iphone
+
+      section
+        h3 &ldquo;Nobody disables JavaScript!&rdquo;
+
+      section(data-bespoke-backdrop='jakea')
+        h3 &ldquo;All your users are non-JS<br>while they&rsquo;re downloading your JS&rdquo;
+        h4 Jake Archibald, Google
+
+      section
+        h2 Your first load is<br /><br />your first impression
+
+      section
+        h2 &ldquo;Time to first tweet&rdquo;
+
+      section
+        img(src='images/twitter.png', style='width: 600px')
+
+      section
+        h3(style='width:80%') &ldquo;Make sure your web design adheres to the principles of progressive enhancement as this helps our systems (and a wider range of browsers) see usable content and basic functionality&rdquo;
+        h4 Google Webmaster Central
+
+      section
+        h2 Progressive<br><br>Enhancement
+        h3 &mdash; circ. 2003 &mdash;
+
+      section(data-bespoke-backdrop='stevechampeon')
+        h3(style='width:70%') &ldquo;&hellip;all the way up from &ldquo;baseline&rdquo;, to &ldquo;legacy&rdquo;, to &ldquo;midrange&rdquo;, to &ldquo;modern&rdquo; and beyond.&rdquo;
+        h4 Steve Champeon
+
+      section(data-bespoke-backdrop='lukew')
+        h3(style='width:50%') &ldquo;Build in layers, from HTML to CSS to Javascript. This creates a less fragile and more foolproof Web page&rdquo;
+        h4 Luke Wroblewski
+
+      section(data-bespoke-backdrop='bradf')
+        h3(style='width:60%') &ldquo;Progressive enhancement becomes an important strategy in order to deal with today and tomorrow&rsquo;s diverse landscape.&rdquo;
+        h4 Brad Frost
+
+      section(data-bespoke-backdrop='aarong')
+        h3 &ldquo;Fundamentally, progressive<br>enhancement is about accessibility&rdquo;
+        h4 Aaron Gustafson
+
+      section
+        h2 Building with
+        h3 &mdash; the web&rsquo;s &mdash;
+        h2 Foundational elements
+
+      section(data-bespoke-backdrop='tim')
+        h2 HTTP 0.9
+        h3 &mdash; circ. 1991 &mdash;
+
+      section
+        pre.mermaid.
+          graph TD;
+            web[http://example.com];
+            html[HTML Content];
+            web-->html;
+            html-- Link -->web;
+
+      section
+        h3 Until&hellip;
+
+      section(data-bespoke-backdrop='loading')
+        h2 The Ajax Revolution
+        h3 &mdash; circ. 2005 &mdash;
+
+      section
+        pre.mermaid.
+          graph TD;
+            web[http://example.com];
+            api[http://api.example.com];
+            js[JavaScript];
+            web-- HTML Transport -->js;
+            js-- AJAX -->api;
+            api-->js;
+
+      section
+        h2 Progressive<br /><br />enhancement
+        h3 &mdash; vs. &mdash;
+        h2 single page<br /><br />apps?
+
+      section
+        h2 Why<br /><br />progressive<br><br>enhancement?
+
+      section
+        ul
+          li Initial page load speed
+          li Crawlability and curlability
+          li More accessible by default
+          li Forces inclusive design
+
+      section
+        h2 When is<br /><br />progressive enhancement<br /><br />non-negotiable?
+
+      section
+        ul
+          li Your site is content-driven &amp; publicly available
+          li You&rsquo;re building a government site
+          li Your site is an &ldquo;essential service&rdquo;, i.e. <a href="http://www.abc.net.au/news/2014-11-05/blind-woman-launches-court-action-against-coles-over-its-website/5869874">Coles Online</a>
+
+      section
+        h2 Why<br /><br />single page<br><br>apps?
+
+      section
+        ul
+          li Long-lived applications
+          li Richer, more app-like experiences
+          li Fluid transitions between multiple states
+          li Singular, cohesive, testable UI codebase
+          li Easier to build, test and reason about
+          li Can be packaged into an app, e.g. PhoneGap
+
+      section(data-bespoke-backdrop='explosion')
+        h2 Something changed
+
+      section(data-bespoke-backdrop='ryandahl')
+        h2 Node.js
+        h3 Ryan Dahl
+
+      section(data-bespoke-backdrop='substack')
+        h2 Browserify
+        h3 James Halliday, a.k.a. Substack
+
+      section
+        img(style='width: 400px', src='images/isomorphic-client-server-mvc.png')
+        h3 Airbnb, <span>2013</span>
+
+      section
+        img(style='width:30%; margin-bottom: 12px', src='images/rendr.png', alt='Rendr')
+        h3 +
+        img(style='width:15%', src='images/backbone.png', alt='Backbone')
+
+      section
+        img(style='width:20%', src='images/react.png', alt='React')
+        br
+        h2 React
+
+      section(data-bespoke-backdrop='universaljs')
+        h3 &mdash; The promise of &mdash;
+        h2 Universal JavaScript
+
+      section(data-bespoke-backdrop='dawn')
+        h2 Dawn<br /><br /><span style="letter-spacing: 20px; word-spacing: 10px">of the</span><br /><br />Progressive<br /><br />Single Page App
+
+      section
+        h2 How?
+
+      section
+        h2 The<br /><br />elements
+        h3 &mdash; of &mdash;
+        h2 progressive<br/><br/>single page apps
+
+      section
+        ul.roman
+          li Rendering
+          li Routing
+          li Data fetching
+          li Form submissions
+          li Micro-interactions
+
+      section(data-bespoke-backdrop='virtual-dom')
+        h3 i.
+        h2 Rendering
+
+      section
+        h2 Server Rendering
+
+      section
+        img(style='width:20%', src='images/react.png', alt='React')
+        br
+        h2 React
+
+      section
+        pre.language-jsx
+          code.
+            import React, { Component } from 'react';
+
+            export default class MyComponent extends Component {
+              render() {
+                return &lt;div&gt;Hello World!&lt;/div&gt;;
+              }
+            }
+
+      section
+        pre.language-jsx
+          code.
+            // Server
+            React.renderToString(&lt;MyComponent /&gt;);
+
+      section
+        pre.language-markup
+          code.
+            &lt;div id="app"
+              data-reactid=".23qqlyvw6io"
+              data-react-checksum="509597258"&gt;
+
+              &lt;div data-reactid=".23qqlyvw6io.0" &gt;Hello World!&lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;script src="my-awesome-app.js"&gt;&lt;/script&gt;
+
+      section(data-bespoke-backdrop='websurfintime')
+        h2 Internet like it&rsquo;s 1999
+
+      section
+        h2 Client rendering is<br /><br />progressive enhancement
+
+      section
+        pre.language-jsx
+          code.
+            React.render(&lt;MyComponent /&gt;, element);
+
+      section(data-bespoke-backdrop='routing')
+        h3 ii.
+        h2 Routing
+
+      section
+        .avatars
+          img.avatar(src='images/ryanflorence.jpg')
+          img.avatar(src='images/michaeljackson.jpg')
+        h2 react-router
+        h4 Ryan Florence &amp; Michael Jackson
+
+      section
+        pre.language-jsx
+          code.
+            import React from 'react';
+            import { Route } from 'react-router';
+
+            export default (
+              &lt;Route name="root" path="/" handler={RootHandler}&gt;
+                &lt;Route name="results" handler={ResultsHandler} /&gt;
+              &lt;/Route&gt;
+            );
+
+      section
+        pre.language-jsx
+          code.
+            app.get('*', conn => serverRender(
+              conn.path,
+              conn.request.headers.Cookie
+            ));
+
+      section
+        pre.language-jsx
+          code.
+            Router.run(routes, path, Handler => {
+              resolve(`&lt;html&gt;
+                         &lt;div id="app"&gt;
+                           ${ React.renderToString(&lt;Handler /&gt;) }
+                         &lt;/div&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/html&gt;`);
+            });
+
+      section
+        pre.language-jsx
+          code.
+            // Client router callback
+            Router.run(routes, HistoryLocation, Handler => {
+              React.render(&lt;Handler /&gt;, element);
+            });
+
+      section(data-bespoke-backdrop='datafetching')
+        h3 iii.
+        h2 Data fetching
+
+      section
+        pre.mermaid.
+          graph TD;
+            show_spinner[Show spinner];
+            fetch_content[Fetch content];
+            show_content[Show content];
+            hide_spinner[Hide spinner];
+            show_spinner-->fetch_content;
+            fetch_content-->show_content;
+            fetch_content-->hide_spinner;
+
+      section
+        h3.big React.renderToString(&nbsp;&nbsp;<img style='width: 52px; height: 52px; position: relative; top: 15px; left: -2px;' src='images/loading-spin.svg' />&nbsp;&nbsp;);
+
+      section
+        pre.language-jsx
+          code.
+            // Smarter server rendering:
+
+            FETCH_ALL_THE_THINGS(routeHandlers)
+              .then(data => {
+                React.renderToString(&lt;App data={data} /&gt;);
+              });
+
+      section
+        h2 Decorate Route Handlers
+        h3 &mdash; &amp; &mdash;
+        h2 Fetch on demand
+
+      section
+        h1 react-fetcher
+
+      section
+        pre.language-jsx(style='font-size: 7px; line-height: 6px')
+          code.
+            // index.js
+            import fetchData from './lib/fetchData';
+            import Fetch from './lib/Fetch';
+
+            export default {
+              fetchData,
+              Fetch
+            };
+
+            // fetchData.js
+            import Promise from 'bluebird';
+
+            export default (routes, ...args) => {
+              const promises = routes
+                // Get route fetchers
+                .map(route => route.handler.fetchers)
+
+                // Filter out missing fetchers
+                .filter(fetchers => fetchers)
+
+                // Ensure fetchers are in an array
+                .map(fetchers => Array.isArray(fetchers) ? fetchers : [fetchers])
+
+                // Generate an array of fetcher promises
+                .map(fetchers => Promise.all(fetchers.map(fetcher => fetcher(...args))));
+
+              return Promise.all(promises);
+            };
+
+            // Fetch.js
+            import React from 'react';
+
+            export default (fetchers) => (ComposedComponent) => class extends React.Component {
+              static fetchers = fetchers;
+
+              render() {
+                return &lt;ComposedComponent {...this.props} /&gt;
+              }
+            };
+
+      section
+        h3.big @Fetch
+
+      section
+        img(src='images/decorators.png', style='width: 550px')
+        h4 Proposal by Yehuda Katz
+
+      section
+        img.babel(src='images/babel.svg')
+
+      section
+        pre.language-jsx
+          code.
+            // Fetch decorator
+            import { Fetch } from 'react-fetcher';
+
+            @Fetch(({ params }) => getData(params.id))
+            class MyComponent extends Component {
+              render() { ... }
+            }
+
+      section
+        h2 Fetch functions
+        h3 &mdash; are &mdash;
+        h2 Async functions
+
+      section
+        h3.big fetchData(handlers)
+
+      section
+        pre.language-jsx
+          code.
+            // Server
+            import { fetchData } from 'react-fetcher';
+
+            fetchData(handlers, { ...args }).then((data) => {
+              React.render(&lt;App data={data} /&gt;, element);
+            });
+
+      section
+        pre.language-jsx
+          code.
+            // Client
+            React.render(&lt;App data={???} /&gt;, element);
+
+      section
+        pre.language-jsx
+          code.
+            &lt;script&gt;
+              window.FETCHED_DATA =
+                ${ JSON.stringify(fetchedData) };
+            &lt;/script&gt;
+
+      section
+        pre.language-jsx
+          code.
+            // Initial client render
+            if (window.FLUX_DATA) {
+              flux.deserialize(window.FLUX_DATA);
+              delete window.FLUX_DATA;
+            }
+
+            React.render(&lt;Handler flux={flux} /&gt;, el);
+
+      section(data-bespoke-backdrop='formsubmission')
+        h3 iv.
+        h2 Form submissions
+
+      section
+        h3.big The Zombie Form
+
+      section
+        button Submit
+
+      section
+        pre.language-markup
+          code.
+            &lt;form method="get"
+                  action="/results"
+                  onSubmit={this.onSubmit.bind(this)} &gt;
+
+      section
+        h3.big /results?keywords=javascript
+
+      section
+        pre.language-markup
+          code.
+            &lt;input type=&ldquo;hidden&rdquo; ... /&gt;
+
+      section
+        pre.language-jsx
+          code.
+            onSubmit(event) {
+              event.preventDefault();
+              // ...
+            }
+
+      section
+        h2 First Build Forms<br /><br />Without JS
+
+      section(data-bespoke-backdrop='microinteractions')
+        h3 v.
+        h2 Micro-interactions
+
+      section
+        h3.big The Zombie Button
+
+      section
+        button.hamburger
+          .bar
+          .bar
+          .bar
+
+      section
+        h2 No JavaScript?
+
+      section
+        .takeoff
+          input(type='checkbox', id='rocket')
+          label(for='rocket')
+          .planet
+          .stars
+        h2 Checkbox hacks!
+        h4 (Thanks Ryan Seddon)
+
+      section
+        pre.language-css
+          code.
+            .menu { transform: translateX(-500px) }
+
+            .toggle:checked ~ .menu { transform: none }
+
+      section
+        h2.single-words Maintainable checkbox hacks?
+
+      section
+        h3.big Component Based Architecture
+
+      section
+        pre.mermaid.
+          graph TD;
+            js[JavaScript Component];
+            css[Locally scoped CSS];
+            cssdep[CSS Dependency];
+            images[Images];
+            imagesdep[Images];
+            fontsdep[Fonts];
+            js-->css;
+            css-->images;
+            css-->cssdep;
+            cssdep-->imagesdep;
+            cssdep-->fontsdep;
+
+      section
+        .webpack-logo
+          .logo
+            .cube-inner
+              span.front
+              span.back
+              span.right
+              span.left
+              span.top
+              span.bottom
+            .cube
+              span.front
+              span.back
+              span.right
+              span.left
+              span.top
+              span.bottom
+              span.floor
+        h2 Webpack
+
+      section
+        pre.language-css
+          code.
+            .Header__Menu__Panel { transform: translateX(-500px) }
+
+            .Header__Menu__Toggle:checked ~
+              .Header__Menu__Panel { transform: none }
+
+      section
+        h2 CSS
+        h3 =
+        h2 Magic global strings
+
+      section(data-bespoke-backdrop='elijahmanor')
+        h1 CSS is a code smell
+
+      section.
+        <svg style="transform:scale(0.8)" id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="1e3" viewBox="0 0 1000 1000" width="1e3" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <g id="layer1" transform="translate(3.7129 -62.36)">
+          <g id="flowRoot3336" transform="matrix(1.8595,0,0,1.8595,-30.174,333.87)">
+           <path fill="#fff" stroke="none" id="path4379" d="m105.49 108.89q12.261 0 19.028 6.46 6.7676 6.46 7.5146 14.678h-8.5254q-1.4502-6.2402-5.8008-9.8877-4.3066-3.6475-12.129-3.6475-9.5361 0-15.425 6.7236-5.8447 6.6797-5.8447 20.522 0 11.338 5.2734 18.413 5.3174 7.0312 15.82 7.0312 9.668 0 14.722-7.4268 2.6807-3.9111 3.999-10.283h8.5254q-1.1426 10.195-7.5586 17.095-7.6904 8.3057-20.742 8.3057-11.25 0-18.896-6.8115-10.063-9.0088-10.063-27.817 0-14.282 7.5586-23.423 8.1738-9.9316 22.544-9.9316zm-1.7578 0z"/>
+           <path fill="#fff" stroke="none" id="path4381" d="m149.04 154.37q0.30761 5.4932 2.5928 8.9209 4.3506 6.416 15.337 6.416 4.9219 0 8.9648-1.4062 7.8223-2.7246 7.8223-9.7559 0-5.2734-3.2959-7.5146-3.3398-2.1973-10.459-3.8232l-8.7451-1.9775q-8.5693-1.9336-12.129-4.2627-6.1524-4.043-6.1524-12.085 0-8.7012 6.0205-14.282 6.0205-5.5811 17.051-5.5811 10.151 0 17.227 4.9219 7.1192 4.8779 7.1192 15.645h-8.2178q-0.65918-5.1856-2.8125-7.9541-3.999-5.0537-13.579-5.0537-7.7344 0-11.118 3.252-3.3838 3.252-3.3838 7.5586 0 4.7461 3.9551 6.9434 2.5928 1.4062 11.733 3.5156l9.0527 2.0654q6.5478 1.4941 10.107 4.0869 6.1523 4.5264 6.1523 13.14 0 10.723-7.8223 15.337-7.7783 4.6143-18.105 4.6143-12.041 0-18.853-6.1523-6.8115-6.1084-6.6797-16.567h8.2178zm17.666-45.483z"/>
+           <path fill="#fff" stroke="none" id="path4383" d="m208.98 154.37q0.30762 5.4932 2.5928 8.9209 4.3506 6.416 15.337 6.416 4.9219 0 8.9648-1.4062 7.8223-2.7246 7.8223-9.7559 0-5.2734-3.2959-7.5146-3.3398-2.1973-10.459-3.8232l-8.7451-1.9775q-8.5693-1.9336-12.129-4.2627-6.1523-4.043-6.1523-12.085 0-8.7012 6.0205-14.282 6.0205-5.5811 17.051-5.5811 10.151 0 17.227 4.9219 7.1191 4.8779 7.1191 15.645h-8.2178q-0.65918-5.1856-2.8125-7.9541-3.999-5.0537-13.579-5.0537-7.7344 0-11.118 3.252-3.3838 3.252-3.3838 7.5586 0 4.7461 3.9551 6.9434 2.5928 1.4062 11.733 3.5156l9.0527 2.0654q6.5479 1.4941 10.107 4.0869 6.1523 4.5264 6.1523 13.14 0 10.723-7.8223 15.337-7.7783 4.6143-18.105 4.6143-12.041 0-18.853-6.1523-6.8115-6.1084-6.6797-16.567h8.2178zm17.666-45.483z"/>
+           <path fill="#fff" stroke="none" id="path4385" d="m78.063 223.14h12.524l18.545 54.58 18.413-54.58h12.393v64.556h-8.3057v-38.101q0-1.9775 0.0879-6.5478t0.0879-9.7998l-18.413 54.448h-8.6572l-18.545-54.448v1.9775q0 2.373 0.08789 7.251 0.13184 4.834 0.13184 7.1191v38.101h-8.3496v-64.556z"/>
+           <path fill="#fff" stroke="none" id="path4387" d="m181.2 221.39q17.095 0 25.312 10.986 6.416 8.5693 6.416 21.929 0 14.458-7.3389 24.038-8.6133 11.25-24.565 11.25-14.897 0-23.423-9.8438-7.6025-9.4922-7.6025-23.994 0-13.096 6.5039-22.412 8.3496-11.953 24.697-11.953zm0.87891 60.381q11.558 0 16.699-8.2617 5.1856-8.3057 5.1856-19.072 0-11.382-5.9766-18.325-5.9326-6.9434-16.26-6.9434-10.02 0-16.348 6.8994-6.3281 6.8555-6.3281 20.259 0 10.723 5.4053 18.105 5.4492 7.3389 17.622 7.3389zm-0.61523-60.381z"/>
+           <path fill="#fff" stroke="none" id="path4389" d="m248.09 280.23q4.4385 0 7.2949-0.92285 5.0977-1.7139 8.3496-6.5918 2.5928-3.9111 3.7354-10.02 0.65918-3.6475 0.65918-6.7676 0-11.997-4.79-18.633-4.75-6.63-15.34-6.63h-15.513v49.57h15.601zm-24.39-57.085h26.147q13.315 0 20.654 9.4482 6.5478 8.5254 6.5478 21.841 0 10.283-3.8672 18.589-6.8115 14.678-23.423 14.678h-26.06v-64.556z"/>
+           <path fill="#fff" stroke="none" id="path4391" d="m297.83 223.14v39.902q0 7.0312 2.6367 11.689 3.9111 7.0312 13.184 7.0312 11.118 0 15.117-7.6025 2.1533-4.1309 2.1533-11.118v-39.902h8.877v36.255q0 11.909-3.208 18.325-5.8887 11.689-22.236 11.689-16.348 0-22.192-11.689-3.208-6.416-3.208-18.325v-36.255h8.877zm16.567 0z"/>
+           <path fill="#fff" stroke="none" id="path4393" d="m353.21 223.14h8.7451v56.865h32.695v7.6904h-41.44v-64.556z"/>
+           <path fill="#fff" stroke="none" id="path4395" d="m404.14 223.14h47.065v7.9102h-38.54v19.6h35.64v7.4707h-35.64v21.885h39.199v7.6904h-47.725v-64.556zm23.862 0z"/>
+           <path fill="#fff" stroke="none" id="path4397" d="m469.13 266.87q0.30762 5.4932 2.5928 8.9209 4.3506 6.416 15.337 6.416 4.9219 0 8.9648-1.4062 7.8223-2.7246 7.8223-9.7559 0-5.2734-3.2959-7.5146-3.3398-2.1973-10.459-3.8232l-8.7451-1.9775q-8.5693-1.9336-12.129-4.2627-6.1523-4.043-6.1523-12.085 0-8.7012 6.0205-14.282 6.0205-5.5811 17.051-5.5811 10.151 0 17.227 4.9219 7.1191 4.8779 7.1191 15.645h-8.2178q-0.65918-5.1856-2.8125-7.9541-3.999-5.0537-13.579-5.0537-7.7344 0-11.118 3.252-3.3838 3.252-3.3838 7.5586 0 4.7461 3.9551 6.9434 2.5928 1.4062 11.733 3.5156l9.0527 2.0654q6.5479 1.4941 10.107 4.0869 6.1523 4.5264 6.1523 13.14 0 10.723-7.8223 15.337-7.7783 4.6143-18.105 4.6143-12.041 0-18.853-6.1523-6.8115-6.1084-6.6797-16.567h8.2178zm17.666-45.483z"/>
+          </g>
+          <rect id="rect4156" height="695.02" width="695.02" stroke="#fff" y="214.85" x="72.492" stroke-width="5" fill="none"/>
+         </g>
+        </svg>
+
+      section
+        .avatars
+          img.avatar(src='images/sokra.png')
+          img.avatar(src='images/profile.jpg')
+          img.avatar(src='images/glenmaddern.jpg')
+        .avatars
+          img.avatar(src='images/guybedford.jpg')
+          img.avatar(src='images/joshjohnston.jpg')
+          img.avatar(src='images/joshgillies.jpg')
+        h4 github.com/css-modules
+
+      section
+        pre.language-jsx
+          code.
+            import styles from './RefineBar.less';
+
+            // locally scoped!
+            // no more magic strings!
+            &lt;div className={styles.root}&gt;
+              &lt;div className={styles.summary}&gt;
+                ...
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+      section
+        pre.language-css
+          code.
+            .menu { transform: translateX(-500px) }
+
+            .toggle:checked ~ .menu { transform: none }
+
+      section(data-bespoke-backdrop='space')
+        h2 &ldquo;The End of Global CSS&rdquo;
+        h4 SEEK UI Engineering Blog
+
+      section
+        .seek-logo
+
+      section
+        h2 Project Holy Grail
+
+      section
+        h1 Demo time
+
+      section
+        h3.big Coming soon&hellip;
+
+      section
+        h2 The future?
+
+      section
+        h2 Progressive Enhancement
+        h3 +
+        h2 Progressive Apps
+
+      section(data-bespoke-backdrop='grayscale alexrussell')
+        h3(style='width:500px') &ldquo;&hellip;client-side frameworks that have server-rendering as an option work well with the model of [...] Progressive Apps&rdquo;
+        h4 Alex Russell, Google
+
+      section
+        h2 Beyond React&hellip;
+
+      section(data-bespoke-backdrop='disco')
+        h2
+          a(href='https://github.com/Matt-Esch/virtual-dom') virtual-dom
+
+      section(data-bespoke-backdrop='glimmer')
+        h3 Ember&rsquo;s
+        h2
+          a(href='https://github.com/emberjs/ember.js/pull/10501') Glimmer
+        h3 &amp;
+        h2
+          a(href='http://emberjs.com/blog/2014/12/22/inside-fastboot-the-road-to-server-side-rendering.html') FastBoot
+
+      section
+        h2 The future
+        h3 &mdash; belongs to &mdash;
+        h2 Rich, progressive apps
+
+      section
+        h1 Let&rsquo;s fix the web
+
+      section
+        h3.bullet Looking to get started with progressive React?
+        ul
+          li
+            a(href='https://github.com/rackt/react-router-mega-demo') react-router-mega-demo
+          li
+            a(href='https://github.com/steida/este') Este.js
+          li
+            a(href='https://github.com/irvinebroque/isomorphic-hot-loader') isomorphic-hot-loader
+          li
+            a(href='https://github.com/gpbl/isomorphic-react-template') isomorphic-react-template
+
+      section
+        img.avatar(src='images/profile.jpg')
+        h3 @markdalgleish
+
+    script(src='build/build.js')
